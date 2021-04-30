@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {Component, Suspense}  from 'react'
+import Main from './Main';
+import { Link } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+export default class App extends Component {
+
+  render() {
+    return (
+      <div>
+        <Suspense
+          fallback={null}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <div style={{marginLeft: "100px", marginTop: "50px"}}>
+            <div style={{marginBottom: "100px"}}>
+              <Link to="/" style={{marginRight: '20px'}}>Home</Link>
+              <Link to="/finance">Finance</Link>
+            </div>
+            <Main />
+          </div>
+        </Suspense>
+      </div>
+    )
+  }
 }
-
-export default App;
