@@ -12,7 +12,7 @@ npm start
 
 ## The issue
 
-<img src="..public/screenshot.png">
+<img src="../public/screenshot.png">
 
 When clicked on the Finance link, the Finance component is rendered and it shows the `Pay with payunit` button. But this button, when clicked on, does not load/display payunit payment modal, nor display an error message on the browser console.
 
